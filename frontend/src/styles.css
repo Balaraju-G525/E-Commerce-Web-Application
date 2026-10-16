@@ -1,0 +1,27 @@
+:root{--bg:#f7f7f9;--fg:#1d1d1f;--muted:#6b6b76;--card:#fff;--accent:#2f6fed;--border:#e2e2e8;--ok:#1a7f4b;--err:#b3261e;--warn:#a15c00}
+@media (prefers-color-scheme:dark){:root{--bg:#141417;--fg:#f0f0f3;--muted:#9a9aa6;--card:#1e1e23;--border:#32323a;--accent:#6b9bff;--ok:#5fd29b;--err:#ff8a80;--warn:#ffb74d}}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,sans-serif;background:var(--bg);color:var(--fg)}
+a{color:var(--accent)}
+.nav{display:flex;align-items:center;padding:.8rem 1.2rem;background:var(--card);border-bottom:1px solid var(--border)}
+.nav nav{margin-left:auto;display:flex;gap:1rem;align-items:center}
+.brand{font-weight:700;text-decoration:none;color:var(--fg)}
+main{max-width:960px;margin:1.5rem auto;padding:0 1rem}
+.search{width:100%;max-width:360px;padding:.5rem .7rem;margin-bottom:1rem;border:1px solid var(--border);border-radius:6px;background:var(--card);color:var(--fg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem}
+.card,.auth{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1rem;margin-bottom:1rem}
+.auth{max-width:380px;margin:auto;display:flex;flex-direction:column;gap:.8rem}
+.auth input{width:100%;padding:.5rem;margin-top:.2rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--fg)}
+.muted{color:var(--muted);font-size:.9rem}.price{font-weight:600}
+.row{display:flex;gap:.5rem;align-items:center}
+.btn{background:var(--accent);color:#fff;border:0;padding:.5rem .9rem;border-radius:6px;cursor:pointer}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.link{background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0}
+.qty{width:4.2rem;padding:.35rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--fg)}
+.badge{font-size:.75rem;padding:.1rem .45rem;border-radius:99px;border:1px solid currentColor;margin-left:.4rem}
+.badge.in{color:var(--ok)}.badge.low{color:var(--warn)}.badge.out{color:var(--err)}
+.flash{padding:.6rem .9rem;border-radius:8px;margin:.6rem 0;border:1px solid currentColor}
+.flash.success{color:var(--ok)}.flash.error{color:var(--err)}
+table{width:100%;border-collapse:collapse;background:var(--card);margin-bottom:1rem}
+th,td{text-align:left;padding:.6rem;border-bottom:1px solid var(--border)}
+tr.total td{font-weight:700}
